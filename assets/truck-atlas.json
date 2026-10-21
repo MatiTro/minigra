@@ -1,0 +1,80 @@
+{
+  "file": "truck-atlas.png",
+  "image": {
+    "width": 1774,
+    "height": 887,
+    "format": "RGBA PNG",
+    "transparent": true
+  },
+  "layout": {
+    "columns": 2,
+    "rows": 1
+  },
+  "alpha_threshold": 8,
+  "bbox_padding": 2,
+  "notes": [
+    "Use bbox as absolute Canvas drawImage source coordinates.",
+    "Tractor faces down; its physical cab pivot is about (0.5,0.705) within the cropped bbox.",
+    "At a tractor render height near 135 world units this puts the rear fifth wheel near 72 units behind the cab pivot and nose about 40 units ahead.",
+    "Trailer rear doors are at top and coupling at bottom.",
+    "PNG is unchanged from built-in image generation."
+  ],
+  "items": [
+    {
+      "key": "tractor",
+      "cell": {
+        "x": 0,
+        "y": 0,
+        "w": 887,
+        "h": 887
+      },
+      "bbox": {
+        "x": 298,
+        "y": 92,
+        "w": 461,
+        "h": 765
+      },
+      "visible_bbox": {
+        "x": 300,
+        "y": 94,
+        "w": 457,
+        "h": 761
+      },
+      "alpha_pixel_count": 274380,
+      "placement_anchor": {
+        "u": 0.5,
+        "v": 0.705,
+        "meaning": "approximate center of the cab footprint, excluding rear chassis; front points down",
+        "source_x": 528.5,
+        "source_y": 631.3249999999999
+      }
+    },
+    {
+      "key": "trailer",
+      "cell": {
+        "x": 887,
+        "y": 0,
+        "w": 887,
+        "h": 887
+      },
+      "bbox": {
+        "x": 1112,
+        "y": 23,
+        "w": 317,
+        "h": 847
+      },
+      "visible_bbox": {
+        "x": 1114,
+        "y": 25,
+        "w": 313,
+        "h": 843
+      },
+      "alpha_pixel_count": 221452,
+      "placement_anchor": {
+        "u": 0.5,
+        "v": 0.5,
+        "meaning": "overall trailer center; rear doors at top, coupling at bottom"
+      }
+    }
+  ]
+}

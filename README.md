@@ -1,81 +1,118 @@
-# Zmiana na magazynie — Lider, Wojtek i codzienna robota
+# Zmiana na magazynie — edycja pokazowa 1.2
 
-Rozszerzenie gry RAMPA 04. Trzy rozdziały, rozmowy, jazda tirem i busem, obsługa wózka, skanowanie NI oraz praca pieszo.
+Gra 2D w przeglądarce. Wojtek, Lider, palety, telefony i jedna bardzo ważna dodatkowa wiadomość. Trzy rozdziały, sześć misji, prolog i rozmowa końcowa. Za dobry wynik: **200 zł brutto podwyżki**.
 
-## Uruchomienie
+## Poprawki 1.2
 
-Rozpakuj ZIP i otwórz `index.html` w przeglądarce. Gra działa bez instalacji i internetu. W pliku są wszystkie grafiki, style, mechanika i dźwięki.
+- Wózek startuje w wolnym miejscu we wszystkich misjach, także przy wydaniu palet do bufora. Można ruszyć w obu kierunkach; najbliższą paletę można od razu podjąć.
+- Mapa magazynu ma 1680 × 1560 zamiast 1800 × 1620. Skrócono środkową alejkę i część produkcyjną, zachowując przejazdy z pełną paletą.
+- Piesi przechodzą na drugą stronę i wracają tą samą trasą, z postojem na końcach. Nie przeskakują na początek cyklu. Dodatkowy pracownik potrafi nagle przebiec poza pasami: najpierw jest widoczny przy drodze i pojawia się ostrzeżenie.
+- Marysia ma ilustrowany portret blondynki, a Jarek bordową koszulkę i szelki. Fotel wózka jest pusty po wyjściu Wojtka i zajęty po wejściu.
+- Siodło ciągnika jest wewnątrz przedniej części naczepy. Krótsza odległość sworznia od osi odpowiada rysunkowi kół; wspólny punkt podczepienia pozostaje nieruchomy względem obu części podczas skrętu i cofania.
+- Avera i Paktech zaczynają przy otwartej bramie, przodem w stronę placu. Portiernia stoi obok wjazdu. Podjazd pod jedynkę mocniej ściąga busa; poza tym obszarem plac jest płaski. Hamulec zatrzymuje staczanie.
+- Uproszczono prolog, a pochwała Lidera jest rozmową bez animacji poklepywania.
+- Zapisy z 1.1 zachowują ukończone misje; bieżące zadanie rozpoczyna się na nowym układzie. Zapisy 1.2 zachowują dokładny postęp.
 
-W menu można rozpocząć całą zmianę, kontynuować zapis lub od razu wybrać dowolny z trzech rozdziałów. Wybór rozdziału rozpoczyna nową próbę od tego miejsca.
+## Mechanika i scenariusze
 
-## Rozdziały
+- Nowy model skrętu i cofania zestawu: ciągnik porusza się względem tylnej osi, siodło prowadzi niezależną naczepę, a cofanie z dużym złożeniem wymaga korekty do przodu. Bieg przeciwny najpierw wyhamowuje pojazd.
+- Cztery palety AVERY stoją **wewnątrz otwartej naczepy pod rampą 4**. Wjeżdżasz wózkiem, podejmujesz najbliższą paletę i wycofujesz na halę.
+- Przebudowane alejki, przejazd na produkcję, CTP i wjazd do chemii. Kolizje uwzględniają cały obrócony wózek oraz paletę na widłach. Trasy sprawdzane są również rzeczywistym gazem, skrętem, hamowaniem i cofaniem w tym samym silniku, który działa w grze.
+- Lider siedzi przy biurku w biurze magazynu. Przy rozmowie widać obie postacie; w salce siedzą naprzeciwko siebie. Dymki mają ogonek skierowany do mówiącej osoby. Rozmówcy przez telefon pojawiają się w małej karcie połączenia.
+- BHP-owiec najpierw dobiega do Wojtka. Do zakończenia dobiegu nie ma tekstu ani możliwości przeskoczenia do rozmowy.
+- Drobnica wymaga ustawienia palety w zielonym obrysie, z odchyleniem kierunku do około 11°. Tuż obok jest strefa dostępu do gaśnicy. Zastawienie jej wywołuje uwagę; nie kończy odkładania.
+- Dialogi magazynowe, żart o premii i ostrzeżenie przechodzącego pracownika.
+- Zmieniona mapa wymaga rozpoczęcia bieżącej misji od nowa przy wczytaniu starego zapisu. Ukończone wcześniej misje pozostają zachowane. Nowe zapisy wznawiają dokładny postęp.
 
-| Rozdział | Zadania |
-| --- | --- |
-| 01 — Avera | Podstaw tira pod rampę 4. Wsiądź do wózka, zeskanuj NI czterech palet, podejmij je i odłóż na wskazane lokalizacje. |
-| 02 — Paktech | Po telefonie z ochrony podstaw busa pod rampę 1. Następnie pieszo przenieś sześć kartonów z rampy na paletę. |
-| 03 — Pierwsza zmiana | Zdejmij pięć palet z regałów na pola R1–R5. Wysiądź, rozpakuj wszystkie palety i przewieź je do pól BUF-1–BUF-5. |
+## Oprawa i animacje 1.0
 
-Lider jest łysy i nosi bordową koszulkę. Wojtek jest niższy, ma niebieską czapkę i granatową koszulkę. Gracz steruje Wojtkiem, a podczas podstawiania pojazdów przejmuje kierownicę.
+- Ilustrowani Wojtek i Lider: portrety, cztery kierunki patrzenia oraz naprzemienne kroki podczas chodzenia.
+- Spójne ilustrowane sylwetki pracowników produkcji, BHP-owca i ochroniarza, obracane zgodnie z kierunkiem ruchu.
+- Szczegółowe obrazy regałów, maszyn, wózka, busa, ciągnika i niezależnie obracającej się naczepy; cienie, oznaczenia dróg, tekstury podłoża i wyposażone biuro.
+- Animacje podnoszenia i odkładania palet, wiązka skanera, zdejmowanie folii, przenoszenie kartonów, odbiór wydruków i przekazywanie dokumentów. Przedmiot zmienia właściciela dopiero po zakończeniu czynności.
+- Ruch papieru na maszynach, migające kontrolki, ślady opon, światła, delikatne efekty otoczenia i reakcje na błędy.
+- Dźwięk silnika, sygnał cofania, kroki i odgłosy interakcji; włączanie/wyłączanie dźwięku przyciskiem. Dźwięk startuje po pierwszej interakcji gracza.
+- Animowane rozmowy i telefon, wejścia do misji, lista etapów zadania, pełny ekran, regulowana kamera i wygładzone renderowanie 1×/2×. Systemowe ograniczenie animacji wyłącza efekty dekoracyjne.
+- Zachowany scenariusz sześciu misji, prolog i podsumowanie zmiany.
 
-Rozmowy zawierają podane teksty o kontenerze, dostawach Avera i Paktech oraz zaległej pierwszej zmianie. Rozmowy zatrzymują zegar; można przejść dalej spacją, Enterem lub przyciskiem. Jest też przycisk pominięcia rozmowy.
+## Jak uruchomić
+
+Otwórz `index.html` dwuklikiem. Nie wymaga instalacji, internetu, serwera ani konta. Wszystkie grafiki, dźwięki i kod są w tym pliku. Najwygodniej grać na komputerze, z klawiaturą; są też przyciski dotykowe.
+
+Na ekranie startowym wybierz pełną zmianę albo osobną misję do testów. Próby pojedynczych misji mają osobny zapis i nie zastępują postępu pełnej zmiany.
+
+## GitHub Pages
+
+1. Utwórz repozytorium i wgraj **zawartość ZIP-a** do jego katalogu głównego. `index.html` ma leżeć bezpośrednio w katalogu głównym, bez dodatkowego folderu nadrzędnego.
+2. Otwórz **Settings → Pages → Build and deployment**. W polu **Source** wybierz **Deploy from a branch**.
+3. Wybierz gałąź **main** i katalog **/(root)**, potem **Save**. Jeżeli Twoja gałąź ma inną nazwę, wybierz ją zamiast main.
+4. Poczekaj na publikację, a następnie otwórz adres pokazany przez GitHub Pages i przekaż go graczom.
+
+Nie trzeba uruchamiać kompilacji, npm ani backendu. Do samego grania wystarcza `index.html`; plik `.nojekyll` jest dołączony do paczki. Źródła i grafiki służą do dalszego rozwoju.
+
+Instrukcja GitHub: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 ## Sterowanie
 
-| Czynność | Klawiatura | Ekran / tablet |
-| --- | --- | --- |
-| Gaz | ↑ / W | Przytrzymaj GAZ |
-| Hamulec | ↓ / S / spacja | Przytrzymaj HAMULEC |
-| Kierownica | ← → / A D | Przeciągnij koło albo przytrzymaj ‹ / › |
-| Przód / tył | E po zatrzymaniu | D / R |
-| Wykonaj czynność | F | Duży przycisk z prawej |
-| Wsiądź / wysiądź z wózka | Q | Przycisk „wózek” |
-| Chodzenie | Strzałki / WASD | Krzyżak kierunkowy |
-| Kolejna wypowiedź | Spacja / Enter | Dalej |
-| Pauza | P / Escape | Ikona pauzy |
+| Klawisz | Działanie |
+| --- | --- |
+| WASD / strzałki | Chodzenie; w pojeździe kierownica oraz jazda |
+| W / ↑ | Gaz i jazda do przodu |
+| S / ↓ | Hamowanie przed zmianą kierunku, następnie jazda wstecz |
+| Spacja | Hamulec |
+| R | Przełączenie biegu D/R; przycisk gazu na ekranie używa wybranego biegu |
+| Shift / przycisk WOLNO | Precyzyjne, powolne manewry |
+| E | Interakcja wskazana przy postaci: podjęcie, skan, odłożenie, rozmowa itd. |
+| Q | Wsiadanie do wózka / wysiadanie |
+| M / T / G | Poczta / telefon / mapa |
+| Enter / E w rozmowie | Następny dymek; przy dzwonieniu odbiera telefon |
+| Esc | Pauza |
 
-Kierownica wraca do środka po puszczeniu. Wózek ma skrętną tylną oś. Zatrzymaj wózek przed podjęciem lub odłożeniem palety i kieruj **widły** w stronę zaznaczonego miejsca. Przycisk F zmienia opis zależnie od dostępnej czynności.
+Zatrzymaj pojazd przed operacją. Podjeżdżaj do palet widłami. Ręczne zadania, komputer i drukarka wymagają wysiadania z wózka. Przy wydaniach do bufora zatrzymaj paletę w strefie rozpakowania, wysiądź, rozpakuj i wróć na wózek. Złoty znacznik i strzałka prowadzą do bieżącego celu. Dodatkowe kartony trzeba odnaleźć na podstawie e-maila.
 
-### Rozładunek i skaner
+## Co jest w grze
 
-1. Podjedź widłami do palety w naczepie.
-2. F otwiera terminal NI. Wybierz „Skanuj etykietę” lub naciśnij Enter.
-3. Terminal odczyta NI i wskaże miejsce odłożenia.
-4. F podejmuje paletę. Wycofaj z naczepy i jedź do podświetlonej lokalizacji.
-5. Ustaw widły przy polu i wybierz F, aby odłożyć. Każda paleta ma przypisaną lokalizację.
+1. **Avera pod czwórkę:** animowany telefon, cztery skośne rampy, zajęta druga rampa, cofanie zestawem z naczepą i dwie sekundy hamowania w poprawnym położeniu.
+2. **Rozładunek i chemia:** cztery palety zdejmowane z naczepy, NI, jednorazowy błąd trzeciego skanu, Lider i Marysia, ponowny skan, ciasny magazynek chemiczny i piesi na produkcji. Na koniec pochwała i rozmowa o premii przy biurku Lidera.
+3. **Paktech:** ten sam plac, bus pod rampę 1, staczanie na podjeździe i obowiązkowe przytrzymanie hamulca.
+4. **Drobnica:** ręczne przenoszenie kartonów, rozmowa o kodach, transport palety, dostęp do gaśnicy, przyjęcie z e-maila, druk i zaniesienie etykiet na tę samą paletę.
+5. **Produkcja:** potwierdzenie planu dla D1-1, D1-2, D2-1, D2-2, D3-1; pobranie, ręczne rozpakowanie i bufor. E-mail o dodatkowych kartonach w trakcie pracy. Pominięcie ich i wejście do biura uruchamia pierwsze ostrzeżenie; trzeba poprawić wydanie i wrócić.
+6. **CTP i Polimer:** przejazd przez produkcję z pieszymi i paletą na drodze, dostawa beczek, odbiór zwrotu, powrót pod jedynkę, telefon ochrony, załadunek dwóch palet, telefon do Jarka, e-mail z BDO, wydruk i zaniesienie do busa.
 
-### Rozpakowanie i bufor
+Finał odbywa się w salce. Lider podsumowuje zadania i błędy. Przy dobrym wyniku daje 200 zł brutto podwyżki; przy słabym prosi o większe starania.
 
-Najpierw zdejmij wszystkie pięć palet z regałów i odstaw na przypisane pola R1–R5. Gdy ruszy etap rozpakowania, zatrzymaj pusty wózek i wysiądź Q. Podejdź do każdej palety i użyj F. Po zdjęciu folii ze wszystkich palet wróć do wózka, wsiądź Q i przewieź palety do oznaczonych pól w buforze.
+## Czas, BHP i ocena — ustawienia testowe
 
-## Czas, wyniki i zapis
+- Każda misja ma własny limit czasu. Czytanie dialogów, menu i wiadomości zatrzymuje zegar. Limity są w `src/core.js`, w tablicy `MISSIONS`.
+- Dwie uwagi BHP lub trzy kolizje prowadzą do rozmowy w salce i ostatniej szansy. Kolejne naruszenie po tej rozmowie kończy próbę zwolnieniem Wojtka.
+- Potrącenie pieszego natychmiast kończy próbę sceną więzienia. To umowna konsekwencja fabularna gry.
+- Skryptowy błąd skanowania nie obciąża wyniku. Ostrzeżenie za pominięte kartony jest osobną uwagą dotyczącą wykonania pracy.
+- Wynik: 100 minus 12 za uwagę BHP, 9 za kolizję, 20 za pominięte kartony i 10 za nieudaną próbę. Podwyżka wymaga ukończenia sześciu misji, minimum 80 punktów, braku pominiętych kartonów i braku ostatniej szansy.
+- Prędkości, limity i progi są umownymi ustawieniami do testów; oznakowanie i reguły zakładowe można dopasować w kolejnej wersji. Połączenia, poczta, przyjęcia i dokumenty są symulowane wewnątrz gry.
 
-- Limit rozdziału: Avera — 8 minut, Paktech — 5 minut, Pierwsza zmiana — 10 minut.
-- Każdy kontakt pojazdu z przeszkodą dodaje 5 sekund kary. Próba odłożenia na złą lokalizację dodaje 2 sekundy.
-- Wynik rozdziału to czas pracy plus kary. Niższy wynik jest lepszy.
-- Po upływie limitu można powtórzyć rozdział lub dokończyć go poza rankingiem. Kolejny rozdział ma własny limit.
-- Czas zatrzymuje się podczas rozmów, pauzy i czytania ekranu skanera. Odczyt kodu oraz animacje wykonywania pracy wliczają się do czasu.
-- Postęp zapisuje się po czynnościach, przy pauzie i okresowo podczas gry. Kontynuacja wznawia ostatni zapis, z zatrzymanym pojazdem. Nowa próba zastępuje bieżący zapis.
-- Po zakończeniu rozdziału wynik automatycznie trafia do lokalnej tabeli pod imieniem wpisanym w menu, jeśli próba zmieściła się w limicie.
-- Zapis i ranking dotyczą tej samej przeglądarki na tym samym urządzeniu. Nie ma wspólnego rankingu między komputerami.
-- Tryb prywatny lub wyczyszczenie danych strony może usunąć postęp. Przy blokadzie pamięci gra zachowuje dane tylko do końca sesji.
-- Zmiana karty lub okna w trakcie pracy automatycznie pauzuje grę.
+## Robocze decyzje do oceny
 
-## GitHub Pages — aktualizacja obecnej gry
+- Jeden wspólny magazyn z biurem, salką, drobnicą, buforem, produkcją, chemią i CTP; osobny, wspólny dla obu dostaw plac manewrowy.
+- Cztery palety AVERY, w tym chemia; sześć kartonów Paktech; pięć podstawowych palet do produkcji, po jednej na maszynę. Przypisanie folii/papieru jest przykładowe.
+- Druga paleta beczek dla Polimeru czeka wcześniej przy rampie 1. Nie ma dodatkowego kursu po nią.
+- Kartony dodatkowe są za regałem C; po przeczytaniu e-maila pojawia się znacznik. Trafiają do pola PAKOWANIE obok bufora.
+- Oprawa jest płynnym, ilustracyjnym 2D: otoczenie łączy grafiki ilustracyjne z rysowaniem Canvas, osobne portrety Wojtka i Lidera oraz kierunkowe sylwetki i kroki bohaterów. Marysia i Jarek mają własne ilustrowane portrety w kartach telefonu. Kamera ma przybliżanie przyciskami − / +.
 
-1. Rozpakuj paczkę. **Nie przesyłaj samego ZIP-a.**
-2. W obecnym repozytorium zastąp `index.html` nowym plikiem. Możesz też dodać lub zastąpić `README.md` oraz `.nojekyll`.
-3. Zapisz zmianę przyciskiem **Commit changes**.
-4. Jeśli GitHub Pages jest już włączone dla tego repozytorium, poczekaj na zakończenie publikacji i odśwież dotychczasowy adres gry. W razie wczytywania starej wersji użyj Ctrl+F5.
+## Zapis
 
-Przy nowym repozytorium: umieść pliki bezpośrednio w katalogu głównym, następnie wybierz **Settings → Pages → Deploy from a branch → main → /(root) → Save**. Wybierz faktyczną gałąź z plikami, jeśli ma inną nazwę. W planie GitHub Free użyj repozytorium publicznego.
+Postęp zapisuje się lokalnie w przeglądarce po akcjach i co około 5 sekund. Zapis nie jest wspólny między komputerami. W pauzie wybierz **Pobierz zapis** lub **Wczytaj zapis**, aby przenieść go ręcznie. Zapis z pliku lokalnego i z GitHub Pages jest oddzielny. Przed czyszczeniem danych przeglądarki albo przenoszeniem gry pobierz zapis.
 
-Źródło ustawień hostingu: [dokumentacja GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+## Kod i sprawdzenie
 
-## Weryfikacja wersji 0.2
+- `index.html` — gotowa, samodzielna gra.
+- `src/core.js` — scenariusze, punktacja, zapis i kinematyka pojazdów.
+- `src/world.js` i `src/physics.js` — wspólna geometria mapy, obrysy, kolizje i rzeczywisty ruch używany w grze oraz testach.
+- `src/scenes.js` — aktorzy scen, dobieg i kolejność rozmów.
+- Pozostałe pliki `src/` — grafika, animacje, interfejs i sterowanie.
+- `assets/` — ilustracje postaci, pojazdów i wyposażenia osadzone także w samodzielnym HTML; manifesty opisują kadry atlasów.
+- `ASSETY.md` — opis powstania ilustracji i użyte prompty.
+- `python3 build.py` — odtwarza `index.html` ze źródeł.
+- `node --test tests/*.test.cjs` — testy scenariuszy, fizyki, zapisu i przejezdności.
+- `node --expose-gc tests/render-smoke.cjs` — dodatkowe sprawdzenie uruchamiania i renderowania w natywnym Canvas; wymaga deweloperskiej biblioteki `@napi-rs/canvas`. Nie jest potrzebne do grania.
 
-Sprawdzono 24 scenariusze logiki gry: pełną kolejność trzech rozdziałów, skanowanie, prawidłowe i błędne odkładanie, kartony, regały, rozpakowanie pieszo, bufor, zapis i kontynuację, pauzy, kary oraz limit czasu. Symulacja potwierdziła możliwość dojazdu busem od startu do rampy 1, a także przejazdu wózkiem od rzeczywistego miejsca startowego po pierwszą paletę i do jej lokalizacji na regale.
-
-Plansze i postacie wygenerowano rzeczywistym silnikiem Canvas/SVG i obejrzano. W tej sesji nie wykonano testu całego interfejsu, dźwięku ani dotyku w uruchomionej przeglądarce. Przed pokazem warto przejść jedną próbę na docelowym komputerze.
-
-To gra zręcznościowa z umownym planem magazynu i uproszczoną fizyką. Nie łączy się z systemami firmowymi.
+Zaliczono 44 testy automatyczne. Weryfikacja obejmuje animacje czynności i scen, przejazdy z pełnym obrysem ładunku, zasady wszystkich misji, oba warianty z kartonami, wydruki, parking, hamulec, kary, zapis oraz renderowanie Canvas. Pełny test w prawdziwej przeglądarce i strojenie odczuć z jazdy pozostają do wspólnych testów z użytkownikami.

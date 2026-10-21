@@ -1,0 +1,156 @@
+{
+  "file": "warehouse-props.png",
+  "image": {
+    "width": 1774,
+    "height": 887,
+    "format": "RGBA PNG",
+    "transparent": true
+  },
+  "layout": {
+    "columns": 2,
+    "rows": 2,
+    "actual_split_x": 887,
+    "actual_split_y": 405
+  },
+  "alpha_threshold": 8,
+  "bbox_padding": 2,
+  "notes": [
+    "All coordinates are absolute source-image pixels.",
+    "Use bbox as the drawImage source rectangle. The actual row gutter is above the nominal half-height.",
+    "The PNG has not been cropped, rescaled or repainted."
+  ],
+  "items": [
+    {
+      "key": "rack",
+      "nominal_cell": {
+        "x": 0,
+        "y": 0,
+        "w": 887,
+        "h": 443.5
+      },
+      "extraction_region": {
+        "x": 0,
+        "y": 0,
+        "w": 887,
+        "h": 405
+      },
+      "bbox": {
+        "x": 62,
+        "y": 15,
+        "w": 804,
+        "h": 390
+      },
+      "visible_bbox": {
+        "x": 64,
+        "y": 17,
+        "w": 800,
+        "h": 388
+      },
+      "alpha_pixel_count": 255829,
+      "placement_anchor": {
+        "u": 0.5,
+        "v": 1,
+        "meaning": "bottom center of prop"
+      }
+    },
+    {
+      "key": "press",
+      "nominal_cell": {
+        "x": 887,
+        "y": 0,
+        "w": 887,
+        "h": 443.5
+      },
+      "extraction_region": {
+        "x": 887,
+        "y": 0,
+        "w": 887,
+        "h": 405
+      },
+      "bbox": {
+        "x": 914,
+        "y": 31,
+        "w": 834,
+        "h": 367
+      },
+      "visible_bbox": {
+        "x": 916,
+        "y": 33,
+        "w": 830,
+        "h": 363
+      },
+      "alpha_pixel_count": 247595,
+      "placement_anchor": {
+        "u": 0.5,
+        "v": 1,
+        "meaning": "bottom center of prop"
+      }
+    },
+    {
+      "key": "forklift",
+      "nominal_cell": {
+        "x": 0,
+        "y": 443.5,
+        "w": 887,
+        "h": 443.5
+      },
+      "extraction_region": {
+        "x": 0,
+        "y": 405,
+        "w": 887,
+        "h": 482
+      },
+      "bbox": {
+        "x": 338,
+        "y": 405,
+        "w": 248,
+        "h": 466
+      },
+      "visible_bbox": {
+        "x": 340,
+        "y": 405,
+        "w": 244,
+        "h": 464
+      },
+      "alpha_pixel_count": 81390,
+      "placement_anchor": {
+        "u": 0.5,
+        "v": 0.59,
+        "meaning": "approximate driver/body center; forks point up"
+      }
+    },
+    {
+      "key": "van",
+      "nominal_cell": {
+        "x": 887,
+        "y": 443.5,
+        "w": 887,
+        "h": 443.5
+      },
+      "extraction_region": {
+        "x": 887,
+        "y": 405,
+        "w": 887,
+        "h": 482
+      },
+      "bbox": {
+        "x": 1189,
+        "y": 406,
+        "w": 269,
+        "h": 465
+      },
+      "visible_bbox": {
+        "x": 1191,
+        "y": 408,
+        "w": 265,
+        "h": 461
+      },
+      "alpha_pixel_count": 94944,
+      "placement_anchor": {
+        "u": 0.5,
+        "v": 0.5,
+        "meaning": "vehicle center; front points down"
+      }
+    }
+  ]
+}
